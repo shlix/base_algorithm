@@ -1,0 +1,36 @@
+{
+    "[python]": {},
+    //"python.pythonPath": "D:\\ProgramData\\Anaconda3\\envs\\tf12",
+    "editor.fontSize": 14,
+    "files.eol": "\n",
+    "files.insertFinalNewline": false,
+    "vscode_custom_css.policy": true,
+    "vscode_custom_css.imports": [
+      "file:///D:/downloads/vscode/vscode_css/synthwave84-bak.css",
+      "file:///D:/downloads/vscode/vscode_css/enable-electron-vibrancy.js",
+      "file:///D:/downloads/vscode/vscode_css/terminal.css",
+      "file:///D:/downloads/vscode/vscode_css/toolbar.css",
+      "file:///D:/downloads/vscode/vscode_css/vscode-vibrancy-style.css",
+    ],
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "terminal.integrated.shell.windows": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "explorer.confirmDelete": false,
+    "window.zoomLevel": 0,
+    //终端颜色配置
+    "workbench.colorCustomizations" : 
+    {
+    
+	    //可以将鼠标放到下面的色号上根据自己的偏好进行选择
+      "terminal.foreground" : "#6d77b3",
+ 	    //"terminal.background" : "#2b2424"
+    },
+    "workbench.colorTheme": "SynthWave '84",
+    "leetcode.endpoint": "leetcode-cn",
+    "leetcode.workspaceFolder": "d:\\workspace\\PythonProject\\base_algorithm",
+    "leetcode.defaultLanguage": "python3",
+    "leetcode.hint.commandShortcut": false,
+    "leetcode.hint.configWebviewMarkdown": false,
+    "java.configuration.checkProjectSettingsExclusions": false
+}
