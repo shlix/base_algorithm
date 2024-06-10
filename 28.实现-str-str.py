@@ -6,7 +6,7 @@
 
 # @lc code=start
 class Solution:
-    # two-pointers method
+    # two-pointers method, 暴力法
     def strStr(self, haystack: str, needle: str) -> int:
         i, j = 0, 0
         le = len(needle)
