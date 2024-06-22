@@ -6,7 +6,7 @@
 
 # @lc code=start
 class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
+    def lengthOfLongestSubstring1(self, s: str) -> int:
         if s is None or s=='':
             return 0
         char_set = list(s[0])  #TODO char_set可以使用dict，减少查找耗时
@@ -23,7 +23,25 @@ class Solution:
                 char_set.pop(0)
                 i += 1
         return res_index[1]-res_index[0]+1
-#solu = Solution()
-#print(solu.lengthOfLongestSubstring(''))
+    
+    #review 24.06.17
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        i,j = 0,0
+        se = set()
+        res = 0
+        while i<=j and j <len(s):
+            #print(i,j)
+            if s[j] not in se:
+                se.add(s[j])
+                j += 1
+            else:
+                se.remove(s[i])
+                i += 1
+            #print(se)
+            res = max(res,j-i)
+        return res
+            
+solu = Solution()
+print(solu.lengthOfLongestSubstring('a'))
 # @lc code=end
 

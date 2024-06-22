@@ -4,10 +4,9 @@
 # [15] 三数之和
 #
 from typing import List
-import time
 # @lc code=start
 class Solution:
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
+    def threeSum1(self, nums: List[int]) -> List[List[int]]:
         n = len(nums)
         nums.sort()
         ans = list()
@@ -36,5 +35,42 @@ class Solution:
                     ans.append([nums[first], nums[second], nums[third]])
         
         return ans
-# @lc code=end
+    #review 24.06.12
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        nums.sort()  # 首先对数组进行排序
+        res = []
+        n = len(nums)
 
+        for i in range(n):
+            # 跳过重复的元素
+            if i > 0 and nums[i] == nums[i - 1]:
+                continue
+
+            left, right = i + 1, n - 1  # 双指针初始化
+
+            while left < right:
+                s = nums[i] + nums[left] + nums[right]
+                if s < 0:
+                    left += 1
+                elif s > 0:
+                    right -= 1
+                else:
+                    res.append([nums[i], nums[left], nums[right]])
+
+                    # 跳过重复的 left 元素
+                    while left < right and nums[left] == nums[left + 1]:
+                        left += 1
+                    # 跳过重复的 right 元素
+                    while left < right and nums[right] == nums[right - 1]:
+                        right -= 1
+
+                    left += 1
+                    right -= 1
+
+        return res
+# @lc code=end
+sol = Solution()
+sol.threeSum([-1,0,1,2,-1,-4])
+
+#[-1,0,1,2,-1,-4]
+#[-4,-1,-1,0,1,2]
